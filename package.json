@@ -1,0 +1,53 @@
+{
+    "name": "hubPosts",
+    "version": "0.0.13",
+    "author": "MahinAnas",
+    "main": "app.js",
+    "description": "Boilerplate for expressjs based microservices.",
+    "license": "WTFPL",
+    "keywords": [
+        "expressjs",
+        "microservices",
+        "boilerplate",
+        "expressjs-boilerplate",
+        "api gateway",
+        "api",
+        "rest",
+        "expressjs microservice",
+        "express microservice"
+    ],
+    "scripts": {
+        "start": "cross-env NODE_ENV=production node app.js",
+        "test": "cross-env NODE_ENV=test istanbul cover -x **/spec/** --print detail ./node_modules/.bin/jasmine JASMINE_CONFIG_PATH=./spec/support/jasmine.json",
+        "debugtest": "cross-env NODE_ENV=test istanbul cover -x **/spec/** --print detail ./node_modules/.bin/jasmine-node-debug JASMINE_CONFIG_PATH=./spec/support/jasmine.json",
+        "integtest": "cross-env NODE_ENV=test ./node_modules/.bin/jasmine JASMINE_CONFIG_PATH=./spec/support/jasmine-integ.json",
+        "dev": "cross-env NODE_ENV=development node app.js",
+        "update:packages": "node wipe-dependencies.js && rm -rf node_modules && npm update --save-dev && npm update --save"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://https://github.com/mahinanasa"
+    },
+    "dependencies": {
+        "body-parser": "*",
+        "cookie-parser": "*",
+        "express": "*",
+        "handlebars": "*",
+        "hbs": "*",
+        "request": "*",
+        "request-promise-native": "*",
+        "serve-favicon": "*",
+        "sinon": "*",
+        "swagger-jsdoc": "*",
+        "winston": "*",
+        "winston-daily-rotate-file": "*"
+    },
+    "devDependencies": {
+        "chai": "*",
+        "cross-env": "*",
+        "istanbul": "*",
+        "jasmine": "*",
+        "jasmine-spec-reporter": "*",
+        "supertest": "*"
+    }
+}
